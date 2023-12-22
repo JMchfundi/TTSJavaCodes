@@ -17,7 +17,6 @@ public class ReverseTheString
         for (int i = stringArray.length - 1; i >= 0; i--) {
             reversedString[reversedStringIndex] = stringArray[i];
             reversedStringIndex++;
-            // System.out.print(strArray[i]); // Output : avaJyM
         }
 
         return String.valueOf(reversedString);
