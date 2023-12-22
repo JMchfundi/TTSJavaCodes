@@ -4,7 +4,7 @@ public class ReverseTheString
 
 {
     // 1. Using StringBuffer
-    public static String reverseWithStringBuffer(String string) {; 
+    public static String reverseWithStringBuffer(String string) {
         return String.valueOf(new StringBuffer(string).reverse());
     }
 
@@ -22,7 +22,7 @@ public class ReverseTheString
         return String.valueOf(reversedString);
     }
 
-        // 3. Recursive method to reverse string
+    // 3. Recursive method to reverse string
 
     public static String reverseWithRecursiveMethod(String string) {
         if ((null == string) || (string.length() <= 1)) {
@@ -30,5 +30,5 @@ public class ReverseTheString
         }
 
         return reverseWithRecursiveMethod(string.substring(1)) + string.charAt(0);
-    }    
+    }
 }
