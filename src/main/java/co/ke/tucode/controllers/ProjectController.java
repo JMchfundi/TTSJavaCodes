@@ -21,6 +21,8 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import co.ke.tucode.payloads.ReverseTheString;
+
 // import co.ke.tucode.admin.entities.ProjectInfo;
 // import co.ke.tucode.admin.entities.ProjectLocation;
 // import co.ke.tucode.admin.entities.ProjectUpload;
@@ -35,21 +37,21 @@ import org.springframework.web.util.UriComponentsBuilder;
 // import co.ke.tucode.buyer.entities.DocUpload;
 
 @RestController
-@RequestMapping("/ttscodes")
+@RequestMapping("/tucode")
 public class ProjectController {
     /*
      * .......................obr_get_service retrieve all db
      * data.............................
      */
-    @RequestMapping(value = "/hello", method = RequestMethod.GET)
+    @RequestMapping(value = "/reverseString", method = RequestMethod.GET)
     public ResponseEntity<?> get_service() {
-        String string = "Hello Codes";
+        String string = "TTSJavaCode";
         // List<ProjectInfo> projectInfos = projectInfoRepo.findAll();
 
         if (string == null)
             return new ResponseEntity(HttpStatus.NO_CONTENT);
 
-        return new ResponseEntity(string, HttpStatus.OK);
+        return new ResponseEntity(ReverseTheString.reverseWithIterativeMethod(string), HttpStatus.OK);
     }
 
 }
