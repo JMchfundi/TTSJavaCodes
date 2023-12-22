@@ -22,7 +22,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import co.ke.tucode.payloads.ReverseTheString;
+import co.ke.tucode.payloads.ReverseStringPayload;
 
 // import co.ke.tucode.admin.entities.ProjectInfo;
 // import co.ke.tucode.admin.entities.ProjectLocation;
@@ -39,7 +39,7 @@ import co.ke.tucode.payloads.ReverseTheString;
 
 @RestController
 @RequestMapping("/tucode")
-public class ProjectController {
+public class ReverseStringController {
     /*
      * .......................obr_get_service retrieve all db
      * data.............................
@@ -52,7 +52,7 @@ public class ProjectController {
         if (string == null)
             return new ResponseEntity(HttpStatus.NO_CONTENT);
             
-        return new ResponseEntity(ReverseTheString.reverseWithIterativeMethod(string), HttpStatus.OK);
+        return new ResponseEntity(ReverseStringPayload.reverseWithIterativeMethod(string), HttpStatus.OK);
     }
 
 }

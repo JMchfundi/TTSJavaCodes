@@ -1,11 +1,30 @@
 package co.ke.tucode.payloads;
 
-public class ReverseTheString
+public class TTSPyramidPayload
 
 {
     // 1. Using StringBuffer
-    public static String reverseWithStringBuffer(String string) {
-        return String.valueOf(new StringBuffer(string).reverse());
+    public static void printpattern1Pyramid(Integer integerRows) {
+        int rowCount = 1;
+        for (int i = integerRows; i > 0; i--) {
+            // Printing i spaces at the beginning of each row
+
+            for (int j = 1; j <= i; j++) {
+                System.out.print(" ");
+            }
+
+            // Printing 'rowCount' value 'rowCount' times at the end of each row
+
+            for (int j = 1; j <= rowCount; j++) {
+                System.out.print(rowCount + " ");
+            }
+
+            System.out.println();
+
+            // Incrementing the rowCount
+
+            rowCount++;
+        }
     }
 
     // 2. Using iterative method
